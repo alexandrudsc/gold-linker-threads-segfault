@@ -6,7 +6,8 @@ include_directories(${CMAKE_SOURCE_DIR}/src)
 
 set (CMAKE_VERBOSE_MAKEFILE ON)
 
-set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -fstack-protector-strong \
+set (CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} \
+  -O3 -DNDEBUG -fPIC -fstack-protector-strong \
   -Wformat -Wformat-security -D_FORTIFY_SOURCE=2 \
   -ffat-lto-objects -fuse-linker-plugin -flto \
   -fuse-ld=gold -pie -Wl,-z,relro -Wl,-z,now -Wl,--as-needed \
